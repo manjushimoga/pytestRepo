@@ -5,6 +5,7 @@ import pytest
 def test_methodA(setUptearDownClass,setUptearDown):
     print('test_jenkins1: test MethodA Execution.....')
 
+@pytest.mark.smoke
 @pytest.mark.run(order=1)
 def test_methodB(setUptearDownClass,setUptearDown):
     print('test_jenkins1: test MethodB Execution.....')
