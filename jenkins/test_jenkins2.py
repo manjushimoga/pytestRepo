@@ -7,7 +7,8 @@ def test_methodA(setUptearDownClass,setUptearDown):
 @pytest.mark.smoke
 def test_methodB(setUptearDownClass,setUptearDown,name):
     print('test_jenkins2: test MethodB Execution.....')
-    assert name.lower() == 'pytest'
+    if name is not None:
+        assert name.lower() == 'pytest'
 
 @pytest.mark.sanity
 def test_methodC(setUptearDownClass,setUptearDown):
@@ -18,4 +19,5 @@ def test_methodC(setUptearDownClass,setUptearDown):
 @pytest.mark.sanity
 def test_methodD(setUptearDownClass,setUptearDown,name):
     print('test_jenkins2: test MethodD Execution.....')
-    assert name.lower() == 'pytest'
+    if name is not None:
+        assert name.lower() == 'pytest'

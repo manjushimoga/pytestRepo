@@ -22,7 +22,7 @@ def name(request):
     name_value = request.config.getoption("--name")
 
     if name_value is None:
-        return 'No value'
+        return None
     return name_value
 
 # @pytest.fixture()
